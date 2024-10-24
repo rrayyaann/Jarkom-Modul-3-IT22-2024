@@ -13,44 +13,74 @@
 
 <summary>Detail Gambar</summary>
 
-## Network Config
+</details>
+
+# J Configuration
+
 | **Node**       | **Interface** | **IP Address**  | **Netmask**         | **Gateway**       | **Configuration** |
 |----------------|---------------|-----------------|---------------------|-------------------|-------------------|
-| Arakis (Router/DHCP Relay) | eth0 | DHCP            | -                   | -                 | DHCP              |
-| Arakis (Router/DHCP Relay) | eth1 | 192.244.1.1     | 255.255.255.0       | -                 | Static            |
-| Arakis (Router/DHCP Relay) | eth2 | 192.244.2.1     | 255.255.255.0       | -                 | Static            |
-| Arakis (Router/DHCP Relay) | eth3 | 192.244.3.1     | 255.255.255.0       | -                 | Static            |
-| Arakis (Router/DHCP Relay) | eth4 | 192.244.4.1     | 255.255.255.0       | -                 | Static            |
-| Mohiam (DHCP Server)       | eth0 | 192.244.3.2     | 255.255.255.0       | 192.244.3.1       | Static            |
-| Irulan (DNS Server)        | eth0 | 192.244.3.3     | 255.255.255.0       | 192.244.3.1       | Static            |
-| Chani (Database Server)    | eth0 | 192.244.4.2     | 255.255.255.0       | 192.244.4.1       | Static            |
-| Stilgar (Load Balancer)    | eth0 | 192.244.4.3     | 255.255.255.0       | 192.244.4.1       | Static            |
-| Leto (Laravel Worker)      | eth0 | 192.244.2.2     | 255.255.255.0       | 192.244.2.1       | Static            |
-| Duncan (Laravel Worker)    | eth0 | 192.244.2.3     | 255.255.255.0       | 192.244.2.1       | Static            |
-| Jessica (Laravel Worker)   | eth0 | 192.244.2.4     | 255.255.255.0       | 192.244.2.1       | Static            |
-| Vladimir (PHP Worker)      | eth0 | 192.244.1.2     | 255.255.255.0       | 192.244.1.1       | Static            |
-| Rabban (PHP Worker)        | eth0 | 192.244.1.3     | 255.255.255.0       | 192.244.1.1       | Static            |
-| Feyd (PHP Worker)          | eth0 | 192.244.1.4     | 255.255.255.0       | 192.244.1.1       | Static            |
-| Dmitri (Client)            | eth0 | DHCP            | -                   | -                 | DHCP              |
-| Paul (Client)              | eth0 | DHCP            | -                   | -                 | DHCP              |
+| Arakis (Router/Paradis   ) | eth0 | DHCP            | -                   | -                 | DHCP              |
+| Arakis / Paradis           | eth1 | 192.244.1.1     | 255.255.255.0       | -                 | Static            |
+| Arakis / Paradis           | eth2 | 192.244.2.1     | 255.255.255.0       | -                 | Static            |
+| Arakis / Paradis           | eth3 | 192.244.3.1     | 255.255.255.0       | -                 | Static            |
+| Arakis / Paradis           | eth4 | 192.244.4.1     | 255.255.255.0       | -                 | Static            |
+| Mohiam / Tybur             | eth0 | 192.244.3.2     | 255.255.255.0       | 192.244.3.1       | Static            |
+| Irulan / Frintz            | eth0 | 192.244.3.3     | 255.255.255.0       | 192.244.3.1       | Static            |
+| Chani / Warharmer          | eth0 | 192.244.4.2     | 255.255.255.0       | 192.244.4.1       | Static            |
+| Stilgar / Beast            | eth0 | 192.244.4.3     | 255.255.255.0       | 192.244.4.1       | Static            |
+| LB -                       | eth0 |        -        |         -           |         -         | Static            |
+| Leto / Annie               | eth0 | 192.244.2.2     | 255.255.255.0       | 192.244.2.1       | Static            |
+| Duncan / Bertholdt         | eth0 | 192.244.2.3     | 255.255.255.0       | 192.244.2.1       | Static            |
+| Jessica / Reiner           | eth0 | 192.244.2.4     | 255.255.255.0       | 192.244.2.1       | Static            |
+| Vladimir / Armin           | eth0 | 192.244.1.2     | 255.255.255.0       | 192.244.1.1       | Static            |
+| Rabban / Eren              | eth0 | 192.244.1.3     | 255.255.255.0       | 192.244.1.1       | Static            |
+| Feyd / Mikasa              | eth0 | 192.244.1.4     | 255.255.255.0       | 192.244.1.1       | Static            |
+| Dmitri (Client) / Zeke     | eth0 | DHCP            | -                   | -                 | DHCP              |
+| Paul (Client) / Erwin      | eth0 | DHCP            | -                   | -                 | DHCP              |
 
-## IP addresses
+## R Network Config
+| **Node**       | **Interface** | **IP Address**  | **Netmask**         | **Gateway**       | **Configuration** |
+|----------------|---------------|-----------------|---------------------|-------------------|-------------------|
+| Paradis (Router/DHCP Relay) | eth0 | DHCP            | -                   | -                 | DHCP              |
+| Paradis (Router/DHCP Relay) | eth1 | 192.244.1.1     | 255.255.255.0       | -                 | Static            |
+| Paradis (Router/DHCP Relay) | eth2 | 192.244.2.1     | 255.255.255.0       | -                 | Static            |
+| Paradis (Router/DHCP Relay) | eth3 | 192.244.3.1     | 255.255.255.0       | -                 | Static            |
+| Paradis (Router/DHCP Relay) | eth4 | 192.244.4.1     | 255.255.255.0       | -                 | Static            |
+| Tybur (DHCP Server)         | eth0 | 192.244.3.2     | 255.255.255.0       | 192.244.3.1       | Static            |
+| Fritz (DNS Server)          | eth0 | 192.244.3.3     | 255.255.255.0       | 192.244.3.1       | Static            |
+| Warhammer (Database Server) | eth0 | 192.244.4.2     | 255.255.255.0       | 192.244.4.1       | Static            |
+| Beast (Load Balancer Laravel)  | eth0 | 192.244.4.3  | 255.255.255.0       | 192.244.4.1       | Static            |
+| Colossal (Load Balancer PHP)   | eth0 | 192.244.4.3  | 255.255.255.0       | 192.244.4.1       | Static            |
+| Annie (Laravel Worker)         | eth0 | 192.244.2.2  | 255.255.255.0       | 192.244.2.1       | Static            |
+| Bertholdt (Laravel Worker)     | eth0 | 192.244.2.3  | 255.255.255.0       | 192.244.2.1       | Static            |
+| Reiner (Laravel Worker)        | eth0 | 192.244.2.4  | 255.255.255.0       | 192.244.2.1       | Static            |
+| Armin (PHP Worker)             | eth0 | 192.244.1.2  | 255.255.255.0       | 192.244.1.1       | Static            |
+| Eren (PHP Worker)              | eth0 | 192.244.1.3  | 255.255.255.0       | 192.244.1.1       | Static            |
+| Mikasa (PHP Worker)            | eth0 | 192.244.1.4  | 255.255.255.0       | 192.244.1.1       | Static            |
+| Zeke (Client)                  | eth0 | DHCP         | -                   | -                 | DHCP              |
+| Erwin (Client)                 | eth0 | DHCP         | -                   | -                 | DHCP              
+
+## F IP addresses
 | Device              | Interface   | IP Address | Netmask       | Gateway     |
 |---------------------|-------------|------------|---------------|-------------|
-| **Paradis**       | eth0        | DHCP (192.168.122.1)       |             |  
-|                     | eth1        | 192.244.1.1| 255.255.255.0 |             |
-|                     | eth2        | 192.244.2.1| 255.255.255.0 |             |
-|                     | eth3        | 192.244.3.1| 255.255.255.0 |             |
-| **Sriwijaya**       | eth0        | 192.244.3.5| 255.255.255.0 | 192.244.3.1 |
-| **Majapahit**       | eth0        | 192.244.2.2| 255.255.255.0 | 192.244.2.1 |
-| **Tanjungkulai**    | eth0        | 192.244.2.3| 255.255.255.0 | 192.244.2.1 |
-| **Bedahulu**        | eth0        | 192.244.2.4| 255.255.255.0 | 192.244.2.1 |
-| **Kotalingga**      | eth0        | 192.244.3.6| 255.255.255.0 | 192.244.3.1 |
-| **Solok**           | eth0        | 192.244.1.3| 255.255.255.0 | 192.244.1.1 |
-| **Samaratungga**    | eth0        | 192.244.1.2| 255.255.255.0 | 192.244.1.1 |
-| **Mulawarman**      | eth0        | 192.244.3.2| 255.255.255.0 | 192.244.3.1 |
-| **AlexanderVolta**  | eth0        | 192.244.3.3| 255.255.255.0 | 192.244.3.1 |
-| **Balaraja**        | eth0        | 192.244.3.4| 255.255.255.0 | 192.244.3.1 |
+| **Paradis**         | eth0        | DHCP (192.168.122.1)       |             |  
+|                     | eth1        | 10.76.1.1  | 255.255.255.0 |             |
+|                     | eth2        | 10.76.2.1  | 255.255.255.0 |             |
+|                     | eth3        | 10.76.3.1  | 255.255.255.0 |             |
+|                     | eth4        | 10.76.4.1  | 255.255.255.0 |             |
+| **Tybur**           | eth0        | 10.76.4.3  | 255.255.255.0 | 10.76.4.1   |
+| **Fritz**           | eth0        | 10.76.4.2  | 255.255.255.0 | 10.76.4.1   |
+| **Warhammer**       | eth0        | 10.76.3.4  | 255.255.255.0 | 10.76.3.1   |
+| **Beast**           | eth0        | 10.76.3.2  | 255.255.255.0 | 10.76.3.1   |
+| **Colossal**        | eth0        | 10.76.3.3  | 255.255.255.0 | 10.76.3.1   |
+| **Annie**           | eth0        | 10.76.1.2  | 255.255.255.0 | 10.76.1.1   |
+| **Bertholdt**       | eth0        | 10.76.1.3  | 255.255.255.0 | 10.76.1.1   |
+| **Reiner**          | eth0        | 10.76.1.4  | 255.255.255.0 | 10.76.1.1   |
+| **Armin**           | eth0        | 10.76.2.2  | 255.255.255.0 | 10.76.2.1   |
+| **Eren**            | eth0        | 10.76.2.3  | 255.255.255.0 | 10.76.2.1   |
+| **Mikasa**          | eth0        | 10.76.2.4  | 255.255.255.0 | 10.76.2.1   |
+| **Zeke**            | eth0        | DHCP       |        -      |      -      |
+| **Erwin**           | eth0        | DHCP       |        -      |      -      |
 
 ## Konfigurasi
 ### Paradis
