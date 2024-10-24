@@ -46,8 +46,8 @@
 | Paradis (Router/DHCP Relay) | eth2 | 192.244.2.1     | 255.255.255.0       | -                 | Static            |
 | Paradis (Router/DHCP Relay) | eth3 | 192.244.3.1     | 255.255.255.0       | -                 | Static            |
 | Paradis (Router/DHCP Relay) | eth4 | 192.244.4.1     | 255.255.255.0       | -                 | Static            |
-| Tybur (DHCP Server)         | eth0 | 192.244.3.2     | 255.255.255.0       | 192.244.3.1       | Static            |
-| Fritz (DNS Server)          | eth0 | 192.244.3.3     | 255.255.255.0       | 192.244.3.1       | Static            |
+| Tybur (DHCP Server)         | eth0 | 192.244.4.2     | 255.255.255.0       | 192.244.4.1       | Static            |
+| Fritz (DNS Server)          | eth0 | 192.244.4.3     | 255.255.255.0       | 192.244.4.1       | Static            |
 | Warhammer (Database Server) | eth0 | 192.244.4.2     | 255.255.255.0       | 192.244.4.1       | Static            |
 | Beast (Load Balancer Laravel)  | eth0 | 192.244.4.3  | 255.255.255.0       | 192.244.4.1       | Static            |
 | Colossal (Load Balancer PHP)   | eth0 | 192.244.4.3  | 255.255.255.0       | 192.244.4.1       | Static            |
