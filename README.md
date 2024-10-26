@@ -90,22 +90,22 @@ iface eth0 inet dhcp
 
 auto eth1
 iface eth1 inet static
-	address 10.76.1.1
+	address 192.244.1.1
 	netmask 255.255.255.0
 
 auto eth2
 iface eth2 inet static
-	address 10.76.2.1
+	address 192.244.2.1
 	netmask 255.255.255.0
 
 auto eth3
 iface eth3 inet static
-	address 10.76.3.1
+	address 192.244.3.1
 	netmask 255.255.255.0
 
 auto eth4
 iface eth4 inet static
-	address 10.76.4.1
+	address 192.244.4.1
 	netmask 255.255.255.0
 ```
 
@@ -113,89 +113,89 @@ iface eth4 inet static
 ```
 auto eth0
 iface eth0 inet static
-	address 10.76.1.2
+	address 192.244.2.2
 	netmask 255.255.255.0
-	gateway 10.76.1.1
+	gateway 192.244.2.1
 ```
 ### Berthold
 ```
 auto eth0
 iface eth0 inet static
-	address 10.76.1.3
+	address 192.244.2.3
 	netmask 255.255.255.0
-	gateway 10.76.1.1
+	gateway 192.244.2.1
 ```
 ### Reiner
 ```
 auto eth0
 iface eth0 inet static
-	address 10.76.1.4
+	address 192.244.2.4
 	netmask 255.255.255.0
-	gateway 10.76.1.1
+	gateway 192.244.2.1
 ```
 ### Armin
 ```
 auto eth0
 iface eth0 inet static
-	address 10.76.2.2
+	address 192.244.1.2
 	netmask 255.255.255.0
-	gateway 10.76.2.1
+	gateway 192.244.1.1
 ```
 ### Eren
 ```
 auto eth0
 iface eth0 inet static
-	address 10.76.2.3
+	address 192.244.1.3
 	netmask 255.255.255.0
-	gateway 10.76.2.1
+	gateway 192.244.1.1
 ```
 ### Mikasa
 ```
 auto eth0
 iface eth0 inet static
-	address 10.76.2.4
+	address 192.244.1.4
 	netmask 255.255.255.0
-	gateway 10.76.2.1
+	gateway 192.244.1.1
 ```
 ### Beast
 ```
 auto eth0
 iface eth0 inet static
-	address 10.76.3.2
+	address 192.244.4.3
 	netmask 255.255.255.0
-	gateway 10.76.3.1
+	gateway 192.244.4.1
 ```
 ### Colossal
 ```
 auto eth0
 iface eth0 inet static
-	address 10.76.3.3
+	address 192.244.4.3
 	netmask 255.255.255.0
-	gateway 10.76.3.1
+	gateway 192.244.4.1
 ```
 ### Warhammer
 ```
 auto eth0
 iface eth0 inet static
-	address 10.76.3.4
+	address 192.244.4.2
 	netmask 255.255.255.0
-	gateway 10.76.3.1
+	gateway 192.244.4.1
 ```
 ### Fritz
 ```
 auto eth0
 iface eth0 inet static
-	address 10.76.4.2
+	address 192.244.4.3
 	netmask 255.255.255.0
-	gateway 10.76.4.1
+	gateway 192.244.4.1
 ```
 ### Tybur
 ```
 auto eth0
 iface eth0 inet static
-	address 10.76.4.3
+	address 192.244.4.2
 	netmask 255.255.255.0
-	gateway 10.76.4.1
+	gateway 192.244.4.1
 ```
 ### Zeke dan Erwin
 ```
