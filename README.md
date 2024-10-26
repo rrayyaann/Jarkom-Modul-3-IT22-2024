@@ -107,33 +107,11 @@ auto eth4
 iface eth4 inet static
 	address 192.244.4.1
 	netmask 255.255.255.0
+
+up iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 192.244.0.0/16
 ```
 
 ### Annie
-```
-auto eth0
-iface eth0 inet static
-	address 192.244.2.2
-	netmask 255.255.255.0
-	gateway 192.244.2.1
-```
-### Berthold
-```
-auto eth0
-iface eth0 inet static
-	address 192.244.2.3
-	netmask 255.255.255.0
-	gateway 192.244.2.1
-```
-### Reiner
-```
-auto eth0
-iface eth0 inet static
-	address 192.244.2.4
-	netmask 255.255.255.0
-	gateway 192.244.2.1
-```
-### Armin
 ```
 auto eth0
 iface eth0 inet static
@@ -141,7 +119,7 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 192.244.1.1
 ```
-### Eren
+### Berthold
 ```
 auto eth0
 iface eth0 inet static
@@ -149,7 +127,7 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 192.244.1.1
 ```
-### Mikasa
+### Reiner
 ```
 auto eth0
 iface eth0 inet static
@@ -157,29 +135,52 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 192.244.1.1
 ```
+### Armin
+```
+auto eth0
+iface eth0 inet static
+	address 192.244.2.2
+	netmask 255.255.255.0
+	gateway 192.244.2.1
+```
+### Eren
+```
+auto eth0
+iface eth0 inet static
+	address 192.244.2.3
+	netmask 255.255.255.0
+	gateway 192.244.2.1
+```
+### Mikasa
+```
+auto eth0
+iface eth0 inet static
+	address 192.244.2.4
+	netmask 255.255.255.0
+	gateway 192.244.2.1
+```
 ### Beast
 ```
 auto eth0
 iface eth0 inet static
-	address 192.244.4.3
+	address 192.244.3.2
 	netmask 255.255.255.0
-	gateway 192.244.4.1
+	gateway 192.244.3.1
 ```
 ### Colossal
 ```
 auto eth0
 iface eth0 inet static
-	address 192.244.4.3
+	address 192.244.3.3
 	netmask 255.255.255.0
-	gateway 192.244.4.1
+	gateway 192.244.3.1
 ```
 ### Warhammer
 ```
-auto eth0
 iface eth0 inet static
-	address 192.244.4.2
+	address 192.244.3.4
 	netmask 255.255.255.0
-	gateway 192.244.4.1
+	gateway 192.244.3.1
 ```
 ### Fritz
 ```
