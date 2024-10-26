@@ -38,7 +38,7 @@
 | Dmitri (Client) / Zeke     | eth0 | DHCP            | -                   | -                 | DHCP              |
 | Paul (Client) / Erwin      | eth0 | DHCP            | -                   | -                 | DHCP              |
 
-## R Network Config
+## Ray Network Config
 | **Node**       | **Interface** | **IP Address**  | **Netmask**         | **Gateway**       | **Configuration** |
 |----------------|---------------|-----------------|---------------------|-------------------|-------------------|
 | Paradis (Router/DHCP Relay) | eth0 | DHCP            | -                   | -                 | DHCP              |
@@ -48,15 +48,15 @@
 | Paradis (Router/DHCP Relay) | eth4 | 192.244.4.1     | 255.255.255.0       | -                 | Static            |
 | Tybur (DHCP Server)         | eth0 | 192.244.4.2     | 255.255.255.0       | 192.244.4.1       | Static            |
 | Fritz (DNS Server)          | eth0 | 192.244.4.3     | 255.255.255.0       | 192.244.4.1       | Static            |
-| Warhammer (Database Server) | eth0 | 192.244.4.2     | 255.255.255.0       | 192.244.4.1       | Static            |
-| Beast (Load Balancer Laravel)  | eth0 | 192.244.4.3  | 255.255.255.0       | 192.244.4.1       | Static            |
-| Colossal (Load Balancer PHP)   | eth0 | 192.244.4.3  | 255.255.255.0       | 192.244.4.1       | Static            |
-| Annie (Laravel Worker)         | eth0 | 192.244.2.2  | 255.255.255.0       | 192.244.2.1       | Static            |
-| Bertholdt (Laravel Worker)     | eth0 | 192.244.2.3  | 255.255.255.0       | 192.244.2.1       | Static            |
-| Reiner (Laravel Worker)        | eth0 | 192.244.2.4  | 255.255.255.0       | 192.244.2.1       | Static            |
-| Armin (PHP Worker)             | eth0 | 192.244.1.2  | 255.255.255.0       | 192.244.1.1       | Static            |
-| Eren (PHP Worker)              | eth0 | 192.244.1.3  | 255.255.255.0       | 192.244.1.1       | Static            |
-| Mikasa (PHP Worker)            | eth0 | 192.244.1.4  | 255.255.255.0       | 192.244.1.1       | Static            |
+| Warhammer (Database Server) | eth0 | 192.244.3.4     | 255.255.255.0       | 192.244.3.1       | Static            |
+| Beast (Load Balancer Laravel)  | eth0 | 192.244.3.2  | 255.255.255.0       | 192.244.3.1       | Static            |
+| Colossal (Load Balancer PHP)   | eth0 | 192.244.3.3  | 255.255.255.0       | 192.244.3.1       | Static            |
+| Armin (PHP Worker)             | eth0 | 192.244.2.2  | 255.255.255.0       | 192.244.2.1       | Static            |
+| Eren (PHP Worker)              | eth0 | 192.244.2.3  | 255.255.255.0       | 192.244.2.1       | Static            |
+| Mikasa (PHP Worker)            | eth0 | 192.244.2.4  | 255.255.255.0       | 192.244.2.1       | Static            |
+| Annie (Laravel Worker)         | eth0 | 192.244.1.2  | 255.255.255.0       | 192.244.1.1       | Static            |
+| Bertholdt (Laravel Worker)     | eth0 | 192.244.1.3  | 255.255.255.0       | 192.244.1.1       | Static            |
+| Reiner (Laravel Worker)        | eth0 | 192.244.1.4  | 255.255.255.0       | 192.244.1.1       | Static            |
 | Zeke (Client)                  | eth0 | DHCP         | -                   | -                 | DHCP              |
 | Erwin (Client)                 | eth0 | DHCP         | -                   | -                 | DHCP              
 
