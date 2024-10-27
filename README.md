@@ -462,7 +462,9 @@ apt-get install nginx php7.3 php7.3-fpm lynx wget unzip -y
 Pengujian dilakukan dengan mengirimkan 6000 request dan 200 request/second untuk mengevaluasi performa load balancer.
 
 Langkah-langkah:
+
 1 Pastikan server Colossal sudah dikonfigurasi untuk mendistribusikan beban ke beberapa server PHP Worker (Armin, Eren, Mikasa). Server ini harus sudah diatur agar siap menerima dan mengarahkan permintaan (request) ke worker.
+
 2. Gunakan alat pengujian ab untuk mengirim 6000 permintaan ke server Colossal dengan 200 permintaan yang dikirimkan bersamaan. Tujuannya adalah melihat seberapa baik server dapat menangani beban.
 
 ```
