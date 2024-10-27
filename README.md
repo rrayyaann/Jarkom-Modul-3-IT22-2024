@@ -446,17 +446,7 @@ service isc-dhcp-server restart
 <img width="1500" alt="image" src="https://github.com/user-attachments/assets/3b18793b-4ea0-4793-a4f3-3b8ee27bea21">
 
 ## No. 6
-Pada nomor ini, konfigurasi dilakukan untuk membuat PHP Worker dan mengatur virtual host dengan PHP 7.3.
-
-```
-echo nameserver 192.244.4.3 >> /etc/resolv.conf
-
-apt-get update
-apt-get install nginx php7.3 php7.3-fpm lynx wget unzip -y
-
-# Konfigurasi Nginx dan PHP-FPM
-# ...
-```
+Armin berinisiasi untuk memerintahkan setiap worker PHP untuk melakukan konfigurasi virtual host untuk website berikut https://intip.in/BangsaEldia dengan menggunakan php 7.3 (6)
 
 ## No. 7
 Pengujian dilakukan dengan mengirimkan 6000 request dan 200 request/second untuk mengevaluasi performa load balancer.
