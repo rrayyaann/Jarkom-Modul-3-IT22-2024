@@ -1,4 +1,4 @@
-# Lapres Pratikum Jarkom-Modul-2-IT22-2024
+# Lapres Pratikum Jarkom-Modul-3-IT22-2024
 
 **KELOMPOK IT22**
 | Nama | NRP |
@@ -444,3 +444,28 @@ service isc-dhcp-server restart
 
 ### Test ping eldia.it22.com dan marley.it22.com setelah mendapat ip dynamic
 <img width="1500" alt="image" src="https://github.com/user-attachments/assets/3b18793b-4ea0-4793-a4f3-3b8ee27bea21">
+
+## No. 6
+Pada nomor ini, konfigurasi dilakukan untuk membuat PHP Worker dan mengatur virtual host dengan PHP 7.3.
+
+```
+echo nameserver 192.244.4.3 >> /etc/resolv.conf
+
+apt-get update
+apt-get install nginx php7.3 php7.3-fpm lynx wget unzip -y
+
+# Konfigurasi Nginx dan PHP-FPM
+# ...
+```
+
+## No. 7
+Pengujian dilakukan dengan mengirimkan 6000 request dan 200 request/second untuk mengevaluasi performa load balancer.
+
+Langkah-langkah:
+1 Pastikan server Colossal sudah dikonfigurasi untuk mendistribusikan beban ke beberapa server PHP Worker (Armin, Eren, Mikasa). Server ini harus sudah diatur agar siap menerima dan mengarahkan permintaan (request) ke worker.
+2. Gunakan alat pengujian ab untuk mengirim 6000 permintaan ke server Colossal dengan 200 permintaan yang dikirimkan bersamaan. Tujuannya adalah melihat seberapa baik server dapat menangani beban.
+
+```
+ab -n 6000 -c 200 http://10.76.3.3/
+```
+
