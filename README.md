@@ -467,6 +467,48 @@ wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1yli
 
 # Unzip the downloaded file
 unzip /var/www/html/download/bangsa-eldia.zip -d /var/www/html/download
+
+# Move extracted files to the web root
+mv /var/www/html/download/bangsa-eldia/modul-3/* /var/www/html/
+
+# Clean up by removing the download directory
+rm -rf /var/www/html/download/
+
+# Configure Nginx
+cat <<EOL > /etc/nginx/sites-available/it22.conf
+server {
+    listen 80;
+
+    root /var/www/html;
+
+    index index.php index.html index.htm;
+
+    server_name _;
+
+    location / {
+        try_files \$uri \$uri/ /index.php?\$query_string;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+    }
+
+    error_log /var/log/nginx/it22_error.log;
+    access_log /var/log/nginx/it22_access.log;
+}
+EOL
+
+# Enable the site configuration
+ln -s /etc/nginx/sites-available/it22.conf /etc/nginx/sites-enabled/
+
+# Remove the default Nginx site
+rm /etc/nginx/sites-enabled/default
+
+# Restart Nginx and PHP-FPM services
+service nginx restart
+service php7.3-fpm restart
+
 ```
 
 ## No. 7
