@@ -512,15 +512,4 @@ service php7.3-fpm restart
 ```
 
 ## No. 7
-Pengujian dilakukan dengan mengirimkan 6000 request dan 200 request/second untuk mengevaluasi performa load balancer.
-
-Langkah-langkah:
-
-1. Pastikan server Colossal sudah dikonfigurasi untuk mendistribusikan beban ke beberapa server PHP Worker (Armin, Eren, Mikasa). Server ini harus sudah diatur agar siap menerima dan mengarahkan permintaan (request) ke worker.
-
-2. Gunakan alat pengujian ab untuk mengirim 6000 permintaan ke server Colossal dengan 200 permintaan yang dikirimkan bersamaan. Tujuannya adalah melihat seberapa baik server dapat menangani beban.
-
-```
-ab -n 6000 -c 200 http://10.76.3.3/
-```
-
+Dikarenakan Armin sudah mendapatkan kekuatan titan colossal, maka bantulah kaum eldia menggunakan colossal agar dapat bekerja sama dengan baik. Kemudian lakukan testing dengan 6000 request dan 200 request/second. 
