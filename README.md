@@ -447,6 +447,68 @@ service isc-dhcp-server restart
 
 ## No. 6
 Armin berinisiasi untuk memerintahkan setiap worker PHP untuk melakukan konfigurasi virtual host untuk website berikut https://intip.in/BangsaEldia dengan menggunakan php 7.3 (6)
+Setup PHP Worker (Armin, Eren, Mikasa)
+```
+#!/bin/bash
+
+# Update package list and install necessary packages
+apt-get update
+apt-get install lynx nginx wget unzip php7.3 php-fpm -y
+
+# Start PHP-FPM and Nginx services
+service php7.3-fpm start
+service nginx start
+
+# Create download directory
+mkdir -p /var/www/html/download/
+
+# Download the ZIP file from Google Drive
+wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1yliJkxu-3XmgJ6Xb37pGc2Jht5NTO9oj' -O /var/www/html/download/bangsa-eldia.zip
+
+# Unzip the downloaded file
+unzip /var/www/html/download/bangsa-eldia.zip -d /var/www/html/download
+
+# Move extracted files to the web root
+mv /var/www/html/download/bangsa-eldia/modul-3/* /var/www/html/
+
+# Clean up by removing the download directory
+rm -rf /var/www/html/download/
+
+# Configure Nginx
+cat <<EOL > /etc/nginx/sites-available/it19.conf
+server {
+    listen 80;
+
+    root /var/www/html;
+
+    index index.php index.html index.htm;
+
+    server_name _;
+
+    location / {
+        try_files \$uri \$uri/ /index.php?\$query_string;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+    }
+
+    error_log /var/log/nginx/it19_error.log;
+    access_log /var/log/nginx/it19_access.log;
+}
+EOL
+
+# Enable the site configuration
+ln -s /etc/nginx/sites-available/it19.conf /etc/nginx/sites-enabled/
+
+# Remove the default Nginx site
+rm /etc/nginx/sites-enabled/default
+
+# Restart Nginx and PHP-FPM services
+service nginx restart
+service php7.3-fpm restart
+```
 
 ## No. 7
 Pengujian dilakukan dengan mengirimkan 6000 request dan 200 request/second untuk mengevaluasi performa load balancer.
