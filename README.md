@@ -4,7 +4,7 @@
 | Nama | NRP |
 |---------------------------|------------|
 |Muhamad Arrayyan | 5027231014 |
-|Fadlillah Cantika Sari Hermawan | 5027231042 |
+|Fadlillah Cantika Sari Hermawan ❌| 5027231042 |
 
 <details>
 
